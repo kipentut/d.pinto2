@@ -36,7 +36,16 @@
 	</nav>
 
 <script language="JavaScript">
-	alert("Welcome to my Website!")
+ var time;
+  time = prompt ("Enter the current time of the day (0-24)", "");
+  if(time >= 0 && time < 12)
+    alert("Good Morning! Welcome to my Website.")
+  else if(time >= 12 && time < 17)
+    alert("Good Afternoon! Welcome to my Website.")
+  else if (time >= 17 && time <=24)
+    alert("Good Evening! Welcome to my Website.")
+  else
+  	alert("Good Day! Welcome to my Website.")
 </script>
 </body>
 </html>
