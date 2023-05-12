@@ -1,51 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style type="text/css">
-		body{background-repeat: no-repeat; background-size: cover;}
-		*{margin: 0;padding: 0}
-		nav{width: 100%; height: 60px; background-color: #555;background-color: transparent; border-bottom: solid black}
-		nav p{font-family: cursive; color: #222; font-size: 25px; line-height: 55px; float: left; padding: 0px 20px;}
-		nav ul{float: left;}
-		nav ul li{float: left; list-style: none; position: relative;}
-		nav ul li a{display: block;font-family: arial; color: #222; font-size: 18px; padding: 22px 14px; text-decoration: none;}
-		nav ul li ul{display: none; position: absolute; background-color: transparent; padding: 5px;border-radius: 0px 0px 4px 4px;}
-		nav ul li:hover ul{display: block;}
-		nav ul li ul li{width: 200px; }
-		nav ul li ul li a{padding: 12px 14px; font-size: 18px;border-radius: 4px 4px 4px 4px;}
-		nav ul li ul li a:hover{background-color: seagreen;}
-		nav ul li a:hover{background-color: seagreen; padding: 15px 20px;}	
-	</style>
 	<title>Homepage</title>
+	<style>
+		body {
+			background-color: #f2eee7;
+			color: #555;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		nav {
+			background-color: #d4c4b5;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 60px;
+			padding: 0 20px;
+		}
+		nav ul {
+			display: flex;
+			list-style: none;
+		}
+		nav li {
+			margin: 0 10px;
+		}
+		nav a {
+			color: #555;
+			text-decoration: none;
+			font-size: 18px;
+			padding: 22px 14px;
+			border-radius: 4px;
+			transition: all 0.3s ease-in-out;
+		}
+		nav a:hover {
+			background-color: #b7d1c4;
+			border-radius: 0px 0px 4px 4px;
+			padding: 15px 20px;
+			text-decoration: underline;
+			text-decoration-color: #555;
+			text-decoration-thickness: 3px;
+		}
+		nav ul ul {
+			display: none;
+			position: absolute;
+			top: 60px;
+			background-color: #d4c4b5;
+			border-radius: 0px 0px 4px 4px;
+			padding: 0;
+			margin: 0;
+			height: 200px;
+			width: 350px;
+		}
+		 nav ul li:hover > ul {
+			display:block;
+		}
+		nav ul ul li {
+			position: relative;
+			display: block;
+			float: none;
+			margin: 0;
+			padding: 0;
+			width: 200px;
+			padding-bottom: 20px;
+		}
+		nav ul ul li a {
+			padding: 15px 20px;
+			color:#555;
+			font-size:16px;
+			padding: 12px 14px; 
+			font-size: 18px;
+		}
+		nav ul ul li a:hover {
+			background-color:#b7d1c4;
+			border-radius:0px 4px 4px 0px;
+			text-decoration: none;
+			text-decoration-color: #555;
+			text-decoration-thickness: 3px;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			width: 100%;
+			max-width: 1250px;
+			margin: 0 auto;
+		}
+		h1 {
+			font-size: 3rem;
+			margin: 0;
+			padding: 2rem;
+			text-align: center;
+		}
+		p {
+			font-size: 1.5rem;
+			text-align: center;
+			margin: 1rem;
+		}	
+		</style>
 </head>
-<body background="http://drive.google.com/uc?export=view&id=13Fhld18wfEWPbBltajKen1klokHuGe1q">
-		<nav>
-		<p><b>D.Pinto Website</b></p>
+<body>
+	<nav>
+		<h2>D.Pinto Website</h2>
 		<ul>
-			<li><a href="home.html">Home</a></li>
-			<li><a href="#">Subjects↓</a>
+			<li><a href="home.html">HOME</a></li>
+			<li><a href="#">SUBJECTS↓</a>
 				<ul>
-					<li><a href="https://kipentut.github.io/d.pinto/math.html" target=blank>MATHEMATICS</a></li>
-					<li><a href="https://kipentut.github.io/d.pinto/fil.html" target=blank>FILIPINO</a></li>
-					<li><a href="https://kipentut.github.io/d.pinto/ap.html" target=blank>ARALING PANLIPUNAN</a></li>
-					<li><a href="https://kipentut.github.io/d.pinto/TLE.html" target=blank>TLE</a></li>
-					<li><a href="https://kipentut.github.io/d.pinto/Science.html" target=blank>SCIENCE</a></li>
+					<li><a href="https://kipentut.github.io/d.pinto/math.html" target="_blank">MATHEMATICS</a></li>
+					<li><a href="https://kipentut.github.io/d.pinto/fil.html" target="_blank">FILIPINO</a></li>
+					<li><a href="https://kipentut.github.io/d.pinto/ap.html" target="_blank">AP</a></li>
+					<li><a href="https://kipentut.github.io/d.pinto/TLE.html" target="_blank">TLE</a></li>
+					<li><a href="https://kipentut.github.io/d.pinto/Science.html" target="_blank">SCIENCE</a></li>
 				</ul>
 			</li>
 		</ul>
 	</nav>
-
+	<div class="container">
+		<h1>Welcome to My Website</h1>
+		<p>Hello and welcome! Please feel free to explore and learn something new today.</p>
+	</div>
 <script language="JavaScript">
- var time;
-  time = prompt ("Enter the current time of the day (0-24)", "");
-  if(time >= 0 && time < 12)
+   var time;
+   time = prompt ("Enter the current time of the day (0-24)", "");
+   if(time >= 0 && time < 12)
     alert("Good Morning! Welcome to my Website.")
-  else if(time >= 12 && time < 17)
+   else if(time >= 12 && time < 17)
     alert("Good Afternoon! Welcome to my Website.")
-  else if (time >= 17 && time <=24)
+   else if (time >= 17 && time <=24)
     alert("Good Evening! Welcome to my Website.")
-  else
-  	alert("Good Day! Welcome to my Website.")
+   else
+    alert("Good Day! Welcome to my Website.");
+   if(time == null)
+  	alert("Good Day! Welcome to my Website")
 </script>
+
+</div>
 </body>
 </html>
